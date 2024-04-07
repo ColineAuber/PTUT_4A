@@ -1,0 +1,50 @@
+
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h2>Ajouter une montre</h2>
+       
+        <form [formGroup]="montreForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="montre">montre</label>
+                <input type="text" formControlName="montre" name="montre" class="form-control" placeholder="Entrez votre lieu de travail">
+              </div>
+            <div class="form-group">
+                <label for="debut">debut</label>
+                <input type="date" formControlName="debut" name="debut"  class="form-control" placeholder="Entrez votre debut">
+              </div>
+      
+              <div class="form-group">
+                <label for="fin">fin</label>
+                <input type="date" formControlName="fin" name ="fin" class="form-control" placeholder="Entrez votre fin">
+              </div>
+      
+              <div class="form-group">
+                <label for="marque">marque</label>
+                <input type="text" formControlName="marque" name="marque" class="form-control" placeholder="Entrez votre date de naissance">
+              </div>
+      
+              <div class="form-group">
+                <label for="etat">etat</label>
+                <input type="text" formControlName="etat" name="etat" class="form-control" placeholder="Entrez votre lieu de travail">
+              </div>
+      
+              <div class="form-group">
+                <label for="patient_id">patient_id</label>
+                <input type="text" formControlName="patient_id" name="patient_id" class="form-control" placeholder="Entrez votre adresse e-mail">
+              </div>
+              
+          
+            <!-- Bouton Valider -->
+            <div class="d-flex justify-content-between mb-4">
+              <button type="submit" mat-icon-button  class="mat-icon-button mat-green-button">
+                 Valider  
+              </button>
+            </div>
+          </form>
+      </div>
+    </div>
+
+ 
+  </div>
+  

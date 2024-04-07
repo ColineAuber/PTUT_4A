@@ -1,0 +1,87 @@
+{
+    "login": {
+      "id": 1,
+      "username": "votre_nom_utilisateur",
+      "password": "votre_mot_de_passe"
+    },
+    "accueil_medecin": {
+      "id": 2,
+      "Nombredepatients": 18,
+      "Nombredealertes": 3,
+      "Nombredemontresactive": 5,
+      "Nombredheureintensite": {
+        "Sedentaire": 5,
+        "legere": 6,
+        "moderee": 7,
+        "vigoureuse": 10
+      }
+    },
+    "montres": [
+      {
+        "id": 3,
+        "montre": "Nom_Montre_1",
+        "patient": "Nom_Patient_1",
+        "debut": "2024-02-19T08:00:00Z",
+        "fin": "2024-02-19T17:00:00Z",
+        "actif": true,
+        "marque": "Marque_1",
+        "donnees": "Donnees_1"
+      },
+      {
+        "id": 4,
+        "montre": "Nom_Montre_2",
+        "patient": "Nom_Patient_2",
+        "debut": "2024-02-19T09:00:00Z",
+        "fin": "2024-02-19T18:00:00Z",
+        "actif": false,
+        "marque": "Marque_2",
+        "donnees": "Donnees_2"
+      }
+    ],
+    "patients": [
+      {
+        "id": 5,
+        "nom": "Nom_Patient_1",
+        "prenom": "Prenom_Patient_1",
+        "dateNaissance": "1990-01-01",
+        "etat": "Etat_Patient_1",
+        "statistiques": {
+
+        }
+      
+      },
+      {
+        "id": 6,
+        "nom": "Nom_Patient_2",
+        "prenom": "Prenom_Patient_2",
+        "datenaissance": "1995-05-05",
+        "etat": "Etat_Patient_2",
+        "statistiques": {
+        
+        }
+      }
+    ],
+    "medecins": [
+        {
+          "id": 8,
+          "nom": "Nom_Patient_1",
+          "prenom": "Prenom_Patient_1",
+          "dateNaissance": "1990-01-01",
+          "etat": "Etat_Patient_1",
+          "statistiques": {
+  
+          }
+        
+        },
+        {
+          "id": 9,
+          "nom": "Nom_Patient_2",
+          "prenom": "Prenom_Patient_2",
+          "dateNaissance": "1995-05-05",
+          "lieuTravail": "Etat_Patient_2",
+          "mail": "Etat_Patient_2",
+          "motDePasse": "Etat_Patient_2"
+          
+        }
+      ]
+  }

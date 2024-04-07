@@ -1,0 +1,61 @@
+
+<div class="split-container">
+    <!-- Partie gauche avec l'image -->
+    <div class="left-section">
+      <img src="assets/images/form.png" >
+    </div>
+  
+    <!-- Partie droite avec les champs de formulaire -->
+    <div class="right-section d-flex flex-column align-items-center mt-4">
+      
+        <!-- Formulaire -->
+        <form [formGroup]="modificationForm" (ngSubmit)="onSubmit()" >
+          <div class="form-group">
+            <h2>Que souhaitez-vous modifier ?</h2>
+            <label for="nom">Nom</label>
+            <input formControlName="nom" type="text" id="nom" class="form-control" placeholder="Entrez votre nom">
+          </div>
+      
+          <div class="form-group">
+            <label for="prenom">Prénom</label>
+            <input formControlName="prenom" type="text" id="prenom" class="form-control" placeholder="Entrez votre prénom">
+          </div>
+      
+          <div class="form-group">
+            <label for="dateNaissance">dateNaissance</label>
+            <input formControlName="dateNaissance" type="date" id="dateNaissance" class="form-control" placeholder="Entrez votre mot de passe">
+          </div>
+      
+          <div class="form-group">
+            <label for="email">email</label>
+            <input formControlName="email" type="email" id="email" class="form-control" placeholder="Entrez votre adresse e-email">
+          </div>
+          <div class="form-group">
+            <label for="etat">etat</label>
+            <input  formControlName="etat" type="text" id="etat" class="form-control" placeholder="Entrez votre adresse e-email">
+          </div>
+          <div class="form-group">
+            <label for="password">password</label>
+            <input  formControlName="password" type="password" id="password" class="form-control" placeholder="Entrez votre adresse e-email">
+          </div>
+         
+      
+          <!-- Boutons Valider et Annuler -->
+          <div (click)="valider()" class="d-flex justify-content-between mb-4">
+            <button mat-icon-button type="submit" class="mat-icon-button mat-green-button">
+              <mat-icon>check_circle</mat-icon>
+            </button>
+          
+            <button (click)="annulerModification()" mat-icon-button type="button" class="mat-icon-button mat-red-button">
+              <mat-icon>cancel</mat-icon>
+            </button>
+          </div>
+          
+          
+          
+        </form>
+      </div>
+      
+      
+  </div>
+  

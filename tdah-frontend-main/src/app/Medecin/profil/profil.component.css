@@ -1,0 +1,51 @@
+/* styles.css (ou styles.scss) */
+
+.split-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .left-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .left-section img {
+    max-width:60%; /* Ajustez la taille de l'image selon vos besoins */
+    max-height: 60%; /* Ajustez la taille de l'image selon vos besoins */
+  }
+  
+  /* styles.css */
+.mat-green-button {
+    background-color: green;
+    color: white;
+  }
+  
+  .mat-red-button {
+    background-color: red;
+    color: white;
+  }
+  
+  
+  .form-group {
+    width: 200%; /* Ajustez la largeur des champs de formulaire selon vos besoins */
+    margin-bottom: 15px;
+  }
+  
+  .btn {
+    width: 80%; /* Ajustez la largeur du bouton selon vos besoins */
+    margin-top: 15px;
+  }
+  /* styles.css (ou styles.scss) */
+
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ajustez cet alignement */
+    justify-content: center;
+    margin-left: -20%;
+  }
+  

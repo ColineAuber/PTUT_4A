@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h2>Modifier un medecin</h2>
+     
+      <form [formGroup]="medecinForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+              <label for="nom">Nom</label>
+              <input type="text" formControlName="nom" name="nom"  class="form-control" placeholder="Entrez votre nom">
+            </div>
+    
+            <div class="form-group">
+              <label for="prenom">Prénom</label>
+              <input type="text" formControlName="prenom" name ="prenom" class="form-control" placeholder="Entrez votre prénom">
+            </div>
+    
+            <div class="form-group">
+              <label for="dateNaissance">Date de naissance</label>
+              <input type="date" formControlName="dateNaissance" name="dateNaissance" class="form-control" placeholder="Entrez votre date de naissance">
+            </div>
+    
+            <div class="form-group">
+              <label for="etat">etat</label>
+              <input type="text" formControlName="etat" name="etat" class="form-control" placeholder="Entrez votre lieu de travail">
+            </div>
+    
+            <div class="form-group">
+              <label for="email">email</label>
+              <input type="email" formControlName="email" name="email" class="form-control" placeholder="Entrez votre adresse e-mail">
+            </div>
+            <div class="form-group">
+              <label for="password">password </label>
+              <input type="password" formControlName="password" name="password" class="form-control" placeholder="Entrez votre adresse e-mail">
+            </div>
+          
+        
+          <!-- Bouton Valider -->
+          <div class="d-flex justify-content-between mb-4">
+            <button type="submit" mat-icon-button  class="mat-icon-button mat-green-button">
+               Valider  
+            </button>
+          </div>
+        </form>
+    </div>
+  </div>
+</div>

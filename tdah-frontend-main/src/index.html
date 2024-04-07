@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TDAHfront</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link  href="assets/img/logo.png">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="Dashboard">
+  <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+  <title>TDAH</title>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!--external css-->
+  <link href="assets/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style-responsive.css" rel="stylesheet">
+  <!-- Bootstrap core assets/CSS -->
+  <link href="assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!--external assets/css-->
+  <link href="assets/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/assets/css" href="assets/css/zabuto_calendar.css">
+  <link rel="stylesheet" type="text/assets/css" href="assets/lib/gritter/css/jquery.gritter.css" />
+  <!-- Custom styles for this template -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
+  <link href="assets/css/style-responsive.css" rel="stylesheet">
+  <script src="assets/lib/chart-master/Chart.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+ <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+.choixCntr {
+ 
+  background-size: 100%;
+
+  width: 100%;
+  height: 100vh;
+ 
+  
+  display:grid;
+  place-items:center;
+}
+
+  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+<body class="mat-typography">
+  <script type="application/javascript">
+    $(document).ready(function() {
+      $("#date-popover").popover({
+        html: true,
+        trigger: "manual"
+      });
+      $("#date-popover").hide();
+      $("#date-popover").click(function(e) {
+        $(this).hide();
+      });
+
+      $("#my-calendar").zabuto_calendar({
+        action: function() {
+          return myDateFunction(this.id, false);
+        },
+        action_nav: function() {
+          return myNavFunction(this.id);
+        },
+        ajax: {
+          url: "show_data.php?action=1",
+          modal: true
+        },
+        legend: [{
+            type: "text",
+            label: "Special event",
+            badge: "00"
+          },
+          {
+            type: "block",
+            label: "Regular event",
+          }
+        ]
+      });
+    });
+
+    function myNavFunction(id) {
+      $("#date-popover").hide();
+      var nav = $("#" + id).data("navigation");
+      var to = $("#" + id).data("to");
+      console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
+    }
+  </script>
+
+   <!-- js placed at the end of the document so the pages load faster -->
+   <script src="assets/lib/jquery/jquery.min.js"></script>
+   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+   <!--BACKSTRETCH-->
+   <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+   <script type="text/javascript" src="assets/lib/jquery.backstretch.min.js"></script>
+  
+   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <app-root></app-root>
+</body>
+</html>

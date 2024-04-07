@@ -1,0 +1,10 @@
+
+.divtable {
+
+  border: 0 ;  border-spacing: 8px; margin: auto ;  width: 10px!important;
+}
+.divtr {
+background-color:  rgb(53, 124, 150); color: white; border: 4px solid white;
+}
+
+

@@ -1,0 +1,71 @@
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center;" routerLink="/medecin/ajouterpatient">
+  <img src="assets/images/hospitalisation.png" alt="Icône">
+  <p class="mt-2">Ajouter patient</p>
+</div>
+
+<div style="width: 100%; height: 100%; ">
+
+  <div class="mb-3">
+      <p-button type="button" icon="pi pi-chevron-left" (click)="prev()" [disabled]="isFirstPage()" styleClass="p-button-text"></p-button>
+      <p-button type="button" icon="pi pi-refresh" (click)="reset()" styleClass="p-button-text"></p-button>
+      <p-button type="button" icon="pi pi-chevron-right" (click)="next()" [disabled]="isLastPage()" styleClass="p-button-text"></p-button>
+  </div>
+  
+  <p-table #dt styleClass="divtable" 
+  [value]="listepatients.data" 
+  [paginator]="true" [rows]="rows" 
+  [showCurrentPageReport]="true" 
+  [(first)]="first" responsiveLayout="scroll"
+  currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" 
+  [rowsPerPageOptions]="[10,25,50]" 
+  [globalFilterFields]="['nom','prenom']">
+  <ng-template pTemplate="caption">
+    <div class="flex">
+        <span class="p-input-icon-left ml-auto">
+            <i class="pi pi-search"></i>
+            <input pInputText type="text" (input)="onGlobalSearchChange($event)" placeholder="Search keyword" />
+        </span>
+    </div>
+</ng-template>
+  <ng-template pTemplate="header">
+      <tr class="divtr">
+        <td>Nom</td>
+        <td>Prénom</td>
+        <td>Date de naissance</td>
+        <td>Etat</td>
+        <td>Classe</td>
+        <td>Poids</td>
+        <td>Taille</td>
+        <td>Modifier</td>
+        <td>Supprimer</td>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-patient>
+      <tr [ngClass]="{'divtr': true}">
+        <td>{{patient.nom}}</td>
+        <td>{{patient.prenom}}</td>
+        <td>{{patient.dateNaissance}}</td>
+        <td>{{patient.etat}}</td>
+        <td>{{patient.classe}}</td>
+        <td>{{patient.poids}}</td>
+        <td>{{patient.taille}}</td>
+        <td>
+          <button [routerLink]="['/medecin/modifierpatients', patient.id]" pButton pRipple type="button" icon="pi pi-pencil" class="p-button-rounded p-button-success"  ></button>
+        </td>
+        <td>
+          <button pButton pRipple type="button" (click)="supprimerpatient(patient.id)" icon="pi pi-times" class="p-button-rounded p-button-danger" ></button>
+
+        </td>
+      </tr>
+  </ng-template>
+</p-table>
+
+</div>
+
+
+
+
+
+
+
+
